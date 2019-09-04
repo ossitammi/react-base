@@ -25,6 +25,7 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
+  devtool: 'inline-source-map',
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: './src/index.html' })
