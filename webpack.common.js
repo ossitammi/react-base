@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -22,10 +21,6 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    contentBase: './dist'
-  },
-  devtool: 'inline-source-map',
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: './src/index.html' })
