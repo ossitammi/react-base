@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { mount, shallow } from 'enzyme';
 
 describe('App test suite', () => {
   it('Renders App without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App/>, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const app = mount(<App/>);
+    app.unmount();
   });
 });
